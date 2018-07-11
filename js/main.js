@@ -97,6 +97,7 @@ updateRestaurants = () => {
   const neighborhood = nSelect[nIndex].value;
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
+    // console.log('ping');
     if (error) { // Got an error!
       console.error(error);
     } else {
@@ -117,8 +118,10 @@ resetRestaurants = (restaurants) => {
 
   // Remove all map markers
   if (self.markers) {
-    self.markers.forEach(marker => marker.remove());
-  }
+      for (var i = 0; i < self.markers.length; i++) {
+        self.markers[i].setMap(null);
+      }
+    }
   self.markers = [];
   self.restaurants = restaurants;
 }
