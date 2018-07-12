@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav {
 	display: block;
 }
 #maincontent {
@@ -131,6 +131,8 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+	display: grid;
+	 	grid-template-columns: repeat(auto-fill, minmax(334px, 1fr));
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
