@@ -1,0 +1,22 @@
+.filter-options {
+  grid-template-columns: 1fr;
+}
+#restaurants-list ul {
+  padding: 0;
+  width: 100%;
+}
+#restaurants-list li {
+  padding: 0.5em;
+}
+.inside body {
+  display: grid;
+    grid-template-areas:
+    "header"
+    "restaurant"
+    "map"
+    "reviews";
+    grid-template-columns: 1fr;
+}
+.inside #footer {
+  background-color: red;
+}
