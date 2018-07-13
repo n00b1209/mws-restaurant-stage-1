@@ -10,7 +10,7 @@ var markers = []
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/js/sw.js').then((reg) => {
+    navigator.serviceWorker.register('sw.js').then((reg) => {
     }, function(err) {
       // registration failed
       console.log('ServiceWorker registration failed: ', err);
