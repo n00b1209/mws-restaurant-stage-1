@@ -168,7 +168,6 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-width: 100%;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -212,6 +211,11 @@ nav h1 a {
 		"reviews reviews"
 		"footer footer";
 		grid-template-columns: 50% 50%;
+}
+
+.inside #restaurant-img {
+	grid-area: restaurant;
+	max-width: 100%;
 }
 
 .inside #map-container {
