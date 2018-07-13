@@ -1,6 +1,6 @@
 const myCache = 'static cache v1';
 let cachedURLs = [
-  '/',
+  '/index.html',
   '/restaurant.html',
   '/css/',
   '/data/restaurants.json',
