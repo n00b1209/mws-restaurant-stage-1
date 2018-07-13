@@ -163,7 +163,7 @@ createRestaurantHTML = (restaurant) => {
   tab.value = 0;
   li.setAttributeNode(tab);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
