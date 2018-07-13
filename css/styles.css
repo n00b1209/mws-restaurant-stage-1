@@ -65,12 +65,13 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+/* hide skip links by default */
 
 .skip-link {
 	position: absolute;
 	top: -40px;
 }
-
+/* show skip links once they gain focus */
 .skip-link:focus {
 	top: 0;
 }

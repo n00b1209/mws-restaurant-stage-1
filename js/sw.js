@@ -10,6 +10,8 @@ let cachedURLs = [
   '/js/restaurant_info.js'
 ];
 
+// Open cache once Service Worker is installed
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(myCache)
@@ -19,6 +21,8 @@ self.addEventListener('install', (event) => {
       })
   );
 });
+
+// Respond to fetch events with cached items if possible
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
