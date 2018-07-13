@@ -80,6 +80,9 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+  google.maps.event.addListenerOnce(map, 'idle', () => {
+  document.getElementsByTagName('iframe')[0].title = "Google Maps";
+})
   updateRestaurants();
 }
 
@@ -146,6 +149,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = `Photo of restaurant ${restaurant.name}`;
   li.append(image);
 
   const name = document.createElement('h1');
